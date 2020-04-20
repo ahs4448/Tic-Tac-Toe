@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+h2{
+    color: white;
+    font-family: "Orbitron";
+}
+
+
+
+.piece{
+    padding: 90px;
+    width: 30%;
+    margin: 4px;
+    display: inline-block;
+    
+    background-size: cover;
+    border: 3px solid rgb(202, 98, 0);
+    border-radius: 4px;
+    float: left;
+    /* background-image: url("qmark.png"); */
+    
+ 
+}
+
+
+
+
+#second{
+    background-size:cover; 
+}
+
+#third{
+    background-size:cover; 
+   
+ }

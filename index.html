@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Tic Tac Toe </a>
+  <h1><span id="scorecard"></span> | </h1>
+</nav>
+
+<!-- <button>Reset</button> -->
+
+<div id="shuffle">
+
+
+
+  <div class="piece" value="1" >
+  </div>
+
+  <div class="piece" value="2" >
+  </div>
+
+  <div class="piece" value="3" >
+  </div>
+
+  <div class="piece" value="4" >
+  </div>
+
+  <div class="piece" value="5" >
+  </div>
+
+  <div class="piece" value="6" >
+  </div>
+
+  <div class="piece" value="7" >
+  </div>
+
+  <div class="piece" value="8" >
+  </div>
+
+  <div class="piece" value="9" >
+  </div>
+
+  
+ 
+
+</div>
+
+
+<script>
+  // let winningnums =["123","456","789","147","258","369","159","357"]
+let clicked = 0;
+let pOneArray = []
+let pTwoArray = []
+
+$(".piece").on("click",function(){
+  
+clicked++;
+
+var element = this;
+var value = element.getAttribute("value");
+
+if(clicked ==0 || clicked ==2 ||clicked ==4 ||clicked ==6 ||clicked ==8 || clicked ==10){
+    $(this).css("background-image", "url('omark.png')")
+    pTwoArray.push(value)
+  }
+else if(clicked ==1 || clicked ==3 ||clicked ==5 ||clicked ==7 ||clicked ==9){
+  $(this).css("background-image", "url('xmark.png')")
+  pOneArray.push(value)
+  console.log(pOneArray)
+}
+
+if(pOneArray.includes("1")=== true && pOneArray.includes("2")=== true && pOneArray.includes("3")=== true){
+  alert('win')
+}else if(pOneArray.includes("4")=== true && pOneArray.includes("5")=== true && pOneArray.includes("6")=== true){
+  alert('win')
+}else if(pOneArray.includes("7")=== true && pOneArray.includes("8")=== true && pOneArray.includes("9")=== true){
+  alert('win')
+}else if(pOneArray.includes("1")=== true && pOneArray.includes("4")=== true && pOneArray.includes("7")=== true){
+  alert('win')
+}else if(pOneArray.includes("2")=== true && pOneArray.includes("5")=== true && pOneArray.includes("8")=== true){
+  alert('win')
+}else if(pOneArray.includes("3")=== true && pOneArray.includes("6")=== true && pOneArray.includes("9")=== true){
+  alert('win')
+}else if(pOneArray.includes("1")=== true && pOneArray.includes("5")=== true && pOneArray.includes("9")=== true){
+  alert('win')
+}else if(pOneArray.includes("3")=== true && pOneArray.includes("5")=== true && pOneArray.includes("7")=== true){
+  alert('win')
+}
+
+if(pTwoArray.includes("1")=== true && pTwoArray.includes("2")=== true && pTwoArray.includes("3")=== true){
+  alert('win')
+}else if(pTwoArray.includes("4")=== true && pTwoArray.includes("5")=== true && pTwoArray.includes("6")=== true){
+  alert('win')
+}else if(pTwoArray.includes("7")=== true && pTwoArray.includes("8")=== true && pTwoArray.includes("9")=== true){
+  alert('win')
+}else if(pTwoArray.includes("1")=== true && pTwoArray.includes("4")=== true && pTwoArray.includes("7")=== true){
+  alert('win')
+}else if(pTwoArray.includes("2")=== true && pTwoArray.includes("5")=== true && pTwoArray.includes("8")=== true){
+  alert('win')
+}else if(pTwoArray.includes("3")=== true && pTwoArray.includes("6")=== true && pTwoArray.includes("9")=== true){
+  alert('win')
+}else if(pTwoArray.includes("1")=== true && pTwoArray.includes("5")=== true && pTwoArray.includes("9")=== true){
+  alert('win')
+}else if(pTwoArray.includes("3")=== true && pTwoArray.includes("5")=== true && pTwoArray.includes("7")=== true){
+  alert('win')
+}
+
+})
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
